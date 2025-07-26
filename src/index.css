@@ -1,0 +1,337 @@
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-bg: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-border: 1px solid rgba(255, 255, 255, 0.2);
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: #e0e0e0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 20px;
+  position: relative;
+}
+
+/* ===== Header Styles ===== */
+.navbar {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+  background: var(--card-bg);
+  border: var(--card-border);
+  backdrop-filter: blur(10px);
+}
+
+#searchBar {
+  outline: none;
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: var(--card-border);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#searchBar::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+#searchBtn,
+#currentBtn {
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#searchBtn {
+  background: white;
+  color: #3e45cb;
+}
+
+#currentBtn {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* ===== Main Content Styles ===== */
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.areaPart {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.areaLeftPart h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.areaLeftPart span {
+  display: block;
+  color: var(--text-secondary);
+}
+
+.areaRightPart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.areaRightPart .cloudOn {
+  font-size: 5rem;
+}
+
+.areaRightPart h1 {
+  font-size: 3rem;
+}
+
+.areaPartBoxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.box {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* ===== Forecast Sections ===== */
+.forcastPart,
+.hourlyForcastPart {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.forecastHeading,
+.forecastHeading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.forecastDays {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+.calenderIcon {
+  margin-right: 0.5rem;
+}
+
+.forecastDay {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.HourlyforecastTime {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.hourlyForecastTime {
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ===== Sunrise/Sunset Section ===== */
+.twoBoxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.secondMain {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.twoBoxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+.headingIcon {
+  margin-right: 0.5rem;
+}
+.boxIcon {
+  border: var(--card-border);
+  color: orange;
+  font-size: 3rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--card-bg);
+}
+.sunriseBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  border: var(--card-border);
+  border-radius: 10px;
+}
+.sunriseBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  /* margin-right: 10px; */
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* border: var(--card-border); */
+}
+
+/* ===== Error Message Styles ===== */
+.error-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 90%;
+  text-align: center;
+}
+
+.error-message .close-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 8px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.error-message .close-btn:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--card-bg);
+  border: var(--card-border);
+  padding: 20px 30px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .twoBoxes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Remove the gap between boxes on desktop */
+  .sunriseBoxes {
+    gap: 0;
+  }
+
+  /* Add border between boxes */
+  .sunriseBox:first-child {
+    /* border-right: var(--card-border); */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .sunriseBox:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
